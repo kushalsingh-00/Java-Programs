@@ -1,6 +1,6 @@
 package com.ksr;
 
-public class string1 {
+public class String1 {
     public static void main() {
         String a="Hello";
         int b=a.length();
