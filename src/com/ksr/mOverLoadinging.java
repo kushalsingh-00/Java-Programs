@@ -1,6 +1,6 @@
 package com.ksr;
 
-public class mOverRidding {
+public class mOverLoading {
     static int plusInt(int a,int b) {
         return a+b;
     }
