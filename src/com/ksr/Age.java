@@ -13,6 +13,6 @@ public class Age {
     }
 
     public static void main(String[] args) {
-        checking(20);
+         checking(20);
     }
 }
