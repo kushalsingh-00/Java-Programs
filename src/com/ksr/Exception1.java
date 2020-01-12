@@ -19,11 +19,11 @@ public class Exception1 {
 
         catch(Exception e)         // if we dont know the exceptions type then all type of exception are sub class of this
         {
-
+            System.out.println("Hi");
         }
         finally
         {
-            System.out.println("Hello");
+            System.out.println("Hello");   // finally is the block where the statement are present who want to be execute after handling error
         }
 
     }
