@@ -1,5 +1,7 @@
 package com.ksr;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Executor;
@@ -9,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 public class HashMap_SynchronizingAccess {
     public static void main(String[] args) throws InterruptedException {
-        Map<String,Integer> cricketTeamScore=new HashMap<>();
+        Map<String,Integer> cricketTeamScore= Collections.synchronizedMap(new HashMap<>());
         cricketTeamScore.put("India",352);
         cricketTeamScore.put("Australia",250);
 
@@ -35,7 +37,10 @@ public class HashMap_SynchronizingAccess {
     }
 
     private static void incrementTeamScore(Map<String, Integer> cricketTeamScore, String team) {
+        synchronized (cricketTeamScore)
+        {
         Integer score=cricketTeamScore.get(team);
         cricketTeamScore.put(team,score+1);
+        }
     }
 }
